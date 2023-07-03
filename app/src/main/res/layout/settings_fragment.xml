@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@drawable/background_1"
+    >
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/Base.Theme.BetMatchApp"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+
+        android:text="@string/settings_label"
+        android:textSize="40sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/notifications_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="24dp"
+
+        style="@style/Base.Theme.BetMatchApp"
+        android:text="@string/settings_notification"
+        android:textSize="30sp"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/dark_theme_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="24dp"
+
+        style="@style/Base.Theme.BetMatchApp"
+        android:text="@string/settings_night_mode"
+        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="24dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/settings_backgroung_label"
+            android:textSize="30sp"
+            />
+
+        <Button
+            android:id="@+id/button_change_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:padding="0dp"
+            style="@style/Base.Theme.BetMatchApp"
+            android:text="@string/settings_change_button"
+            android:textSize="30sp"/>
+    </LinearLayout>
+</LinearLayout>

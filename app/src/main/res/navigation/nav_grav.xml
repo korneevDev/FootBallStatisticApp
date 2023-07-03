@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grav"
+    app:startDestination="@id/startFragment">
+
+
+    <fragment
+        android:id="@+id/startFragment"
+        tools:layout="@layout/start_fragment"
+        android:name="github.mik0war.betmatchapp.start_fragment.presentation.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        tools:layout="@layout/menu_fragment"
+        android:name="github.mik0war.betmatchapp.main_menu.presentation.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_tableFragment"
+            app:destination="@id/tableFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_statisticFragment"
+            app:destination="@id/statisticFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        tools:layout="@layout/news_fragment"
+        android:name="github.mik0war.betmatchapp.news.presentation.NewsFragment"
+        android:label="NewsFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        tools:layout="@layout/settings_fragment"
+        android:name="github.mik0war.betmatchapp.settings.presentation.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/statisticFragment"
+        tools:layout="@layout/statistic_fragment"
+        android:name="github.mik0war.betmatchapp.statistic.presentation.StatisticFragment"
+        android:label="StatisticFragment" />
+    <fragment
+        android:id="@+id/tableFragment"
+        tools:layout="@layout/table_fragment"
+        android:name="github.mik0war.betmatchapp.table.presentation.TableFragment"
+        android:label="TableFragment" />
+</navigation>
