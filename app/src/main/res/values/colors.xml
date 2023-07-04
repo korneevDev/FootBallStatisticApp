@@ -6,6 +6,6 @@
     <color name="main_color">#FC7100</color>
     <color name="main_color_transparent">#4DFC7100</color>
 
-    <color name="status_bar_color">#4E59D8</color>
+    <color name="blue">#4E59D8</color>
 
 </resources>

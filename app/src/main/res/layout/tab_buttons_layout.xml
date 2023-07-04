@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/defence_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:text="@string/defence_label"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-black"
+        />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5" />
+
+    <Button
+        android:id="@+id/attack_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:backgroundTint="@color/blue"
+        android:text="@string/attack_label"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-black"/>
+
+</LinearLayout>

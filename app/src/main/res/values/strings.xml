@@ -5,20 +5,7 @@
     <string name="button_settings">НАСТРОЙКИ</string>
     <string name="button_statistic">СТАТИСТИКА</string>
     <string name="table_country_label"><u>ТАБЛИЦЫ</u></string>
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
-
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="country_name_germany">ГЕРМАНИЯ</string>
     <string name="country_name_england">АНГЛИЯ</string>
     <string name="country_name_russia">РОССИЯ</string>
@@ -28,4 +15,8 @@
     <string name="settings_change_button">change</string>
     <string name="settings_backgroung_label">ОБОИ</string>
     <string name="settings_label">НАСТРОЙКИ</string>
+    <string name="statistic_label">СТАТИСТИКА</string>
+    <string name="news_label">НОВОСТИ</string>
+    <string name="defence_label">ОБОРОНА</string>
+    <string name="attack_label">АТАКА</string>
 </resources>
