@@ -4,6 +4,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import github.mik0war.betmatchapp.core.CommonLiveData
 import github.mik0war.betmatchapp.core.GetList
 import github.mik0war.betmatchapp.statistic.attack.domain.AttackUseCase
 import github.mik0war.betmatchapp.statistic.defence.domain.DefenceUseCase
@@ -31,3 +32,5 @@ class StatisticViewModel(
 
     override fun getList(): List<StatisticUIModel> = liveData.getList()
 }
+
+class StatisticLiveData : CommonLiveData<StatisticUIModel>()

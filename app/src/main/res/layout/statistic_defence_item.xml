@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
+
+    android:id="@+id/root_layout"
     >
 
     <TextView
@@ -11,36 +12,35 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1.5"
-        android:background="@drawable/table_style"
         android:paddingStart="4dp"
 
         android:textColor="@color/black"
-        android:textSize="16sp"
+        style="@style/TableText"
         tools:text="654"
-        />
+        tools:ignore="RtlSymmetry" />
     <TextView
         android:id="@+id/tournamentView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/table_style"
         android:paddingStart="3dp"
 
+        android:gravity="center_vertical"
+
         android:textColor="@color/black"
-        android:textSize="16sp"
+        style="@style/TableText"
         tools:text="654"
-        />
+        tools:ignore="RtlSymmetry" />
 
     <TextView
         android:id="@+id/kickView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/table_style"
         android:gravity="center"
 
         android:textColor="@color/black"
-        android:textSize="16sp"
+        style="@style/TableText"
         tools:text="654"
         />
 
@@ -49,11 +49,10 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/table_style"
         android:gravity="center"
 
         android:textColor="@color/black"
-        android:textSize="16sp"
+        style="@style/TableText"
         tools:text="654"
         />
 

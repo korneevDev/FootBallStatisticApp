@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:background="@drawable/background_1">
 
     <TextView
-        android:id="@+id/label"
+        android:id="@+id/tableLabel"
         android:layout_width="match_parent"
 
         android:layout_height="wrap_content"
@@ -28,8 +29,8 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/table_navgraph"
 
+        android:layout_marginVertical="36dp"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginBottom="48dp"
 
         tools:ignore="FragmentTagUsage"
         tools:layout="@layout/table_country_fragment" />

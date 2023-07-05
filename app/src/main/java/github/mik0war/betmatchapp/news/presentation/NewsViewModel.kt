@@ -4,6 +4,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import github.mik0war.betmatchapp.core.CommonLiveData
 import github.mik0war.betmatchapp.core.GetList
 import github.mik0war.betmatchapp.news.data.NewsRepository
 import github.mik0war.betmatchapp.news.entityModel.NewsUIModel
@@ -16,11 +17,13 @@ class NewsViewModel(
 ): ViewModel(), GetList<NewsUIModel> {
 
     fun loadNews() = viewModelScope.launch(Dispatchers.Main) {
-        liveData.updateNews(repository.getNews().map { it.toUI() })
+        liveData.updateData(repository.getNews().map { it.toUI() })
     }
 
     fun observe(owner: LifecycleOwner, observer: Observer<List<NewsUIModel>>) =
-        liveData.observeNews(owner, observer)
+        liveData.observe(owner, observer)
 
     override fun getList(): List<NewsUIModel> = liveData.getList()
 }
+
+class NewsLiveData : CommonLiveData<NewsUIModel>()

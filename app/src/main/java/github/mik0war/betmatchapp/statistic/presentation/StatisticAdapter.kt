@@ -4,14 +4,17 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import github.mik0war.betmatchapp.R
+import github.mik0war.betmatchapp.core.ColorGetter
 import github.mik0war.betmatchapp.core.GetList
 import github.mik0war.betmatchapp.statistic.entityModel.StatisticUIModel
 
 class StatisticAdapter(
-    private val statisticList: GetList<StatisticUIModel>
+    private val statisticList: GetList<StatisticUIModel>,
+    private val colorGetter: ColorGetter
 ) : RecyclerView.Adapter<StatisticViewHolder>() {
 
     @SuppressLint("NotifyDataSetChanged")
@@ -33,7 +36,7 @@ class StatisticAdapter(
     override fun getItemCount(): Int = statisticList.getList().size
 
     override fun onBindViewHolder(holder: StatisticViewHolder, position: Int) {
-        holder.bind(statisticList.getList()[position])
+        holder.bind(statisticList.getList()[position], colorGetter.getColor(position))
     }
 
     override fun getItemViewType(position: Int): Int {
@@ -44,15 +47,21 @@ class StatisticAdapter(
     }
 }
 
-sealed class StatisticViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+sealed class StatisticViewHolder(
+    view: View
+) : RecyclerView.ViewHolder(view) {
 
-    abstract fun bind(uiModel: StatisticUIModel)
+    open fun bind(uiModel: StatisticUIModel, backGroundColor: Int) {
+        val layout = itemView.findViewById<LinearLayout>(R.id.root_layout)
+        layout.setBackgroundColor(backGroundColor)
+    }
 
     class Defence(
         view: View
     ) : StatisticViewHolder(view) {
 
-        override fun bind(uiModel: StatisticUIModel) {
+        override fun bind(uiModel: StatisticUIModel, backGroundColor: Int) {
+            super.bind(uiModel, backGroundColor)
             val teamView = itemView.findViewById<TextView>(R.id.teamView)
             val tournamentView = itemView.findViewById<TextView>(R.id.tournamentView)
             val kickView = itemView.findViewById<TextView>(R.id.kickView)
@@ -70,7 +79,8 @@ sealed class StatisticViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     class Attack(
         view: View
     ) : StatisticViewHolder(view) {
-        override fun bind(uiModel: StatisticUIModel) {
+        override fun bind(uiModel: StatisticUIModel, backGroundColor: Int) {
+            super.bind(uiModel, backGroundColor)
             val teamView = itemView.findViewById<TextView>(R.id.teamView)
             val tournamentView = itemView.findViewById<TextView>(R.id.tournamentView)
             val kickView = itemView.findViewById<TextView>(R.id.kickView)

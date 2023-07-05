@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/button_table"
+        android:id="@+id/button_russia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -14,12 +14,12 @@
         android:text="@string/country_name_russia"
         android:textSize="40sp"
 
-        app:layout_constraintBottom_toTopOf="@+id/button_news"
+        app:layout_constraintBottom_toTopOf="@+id/button_england"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <Button
-        android:id="@+id/button_news"
+        android:id="@+id/button_england"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -27,12 +27,12 @@
         android:text="@string/country_name_england"
         android:textSize="40sp"
 
-        app:layout_constraintBottom_toTopOf="@+id/button_statistic"
-        app:layout_constraintTop_toBottomOf="@+id/button_table"
+        app:layout_constraintBottom_toTopOf="@+id/button_germany"
+        app:layout_constraintTop_toBottomOf="@+id/button_russia"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <Button
-        android:id="@+id/button_statistic"
+        android:id="@+id/button_germany"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -40,12 +40,13 @@
         android:text="@string/country_name_germany"
         android:textSize="40sp"
 
-        app:layout_constraintBottom_toTopOf="@+id/button_settings"
-        app:layout_constraintTop_toBottomOf="@+id/button_news"
+
+        app:layout_constraintTop_toBottomOf="@+id/button_england"
+        app:layout_constraintBottom_toTopOf="@+id/button_spain"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <Button
-        android:id="@+id/button_settings"
+        android:id="@+id/button_spain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -54,6 +55,6 @@
         android:textSize="40sp"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_statistic"
+        app:layout_constraintTop_toBottomOf="@+id/button_germany"
         app:layout_constraintVertical_chainStyle="spread" />
 </androidx.constraintlayout.widget.ConstraintLayout>

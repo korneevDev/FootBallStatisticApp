@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root_layout">
+
+    <TextView
+        android:id="@+id/numberView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:gravity="center"
+        android:textColor="@color/black"
+        style="@style/TableText"
+        tools:text="1"/>
+
+    <TextView
+        android:id="@+id/teamView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4.55"
+
+        android:textColor="@color/black"
+        style="@style/TableText"
+        tools:text="1"/>
+
+    <TextView
+        android:id="@+id/gamesCountView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:textColor="@color/black"
+        style="@style/TableText"
+        tools:text="1"/>
+
+    <TextView
+        android:id="@+id/wonGamesView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:textColor="@color/black"
+        style="@style/TableText"
+        tools:text="1"/>
+
+    <TextView
+        android:id="@+id/drawGamesView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:textColor="@color/black"
+        style="@style/TableText"
+        tools:text="1"/>
+
+    <TextView
+        android:id="@+id/loseGamesView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:textColor="@color/black"
+        style="@style/TableText"
+        tools:text="1"/>
+
+    <TextView
+        android:id="@+id/ballsView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+
+        android:textColor="@color/black"
+        style="@style/TableText"
+        tools:text="1"/>
+
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:textColor="@color/black"
+        style="@style/TableText"
+        tools:text="1"/>
+
+</LinearLayout>

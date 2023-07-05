@@ -9,5 +9,14 @@
         android:id="@+id/countryFragment"
         tools:layout="@layout/table_country_fragment"
         android:name="github.mik0war.betmatchapp.table.presentation.CountryFragment"
-        android:label="CountryFragment" />
+        android:label="CountryFragment" >
+        <action
+            android:id="@+id/action_table_countryFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        tools:layout="@layout/table_list_fragment"
+        android:name="github.mik0war.betmatchapp.table.presentation.ListFragment"
+        android:label="ListFragment" />
 </navigation>
