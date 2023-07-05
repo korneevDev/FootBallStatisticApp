@@ -11,8 +11,9 @@ import github.mik0war.betmatchapp.table.domain.LoadDataUseCase
 import github.mik0war.betmatchapp.table.entityModel.TableDataUIModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class TableViewModel(
+class TableViewModel @Inject constructor(
     private val getDataUseCase: GetDataUseCase,
     private val loadDataUseCase: LoadDataUseCase,
     private val tableLiveData: TableLiveData
@@ -33,4 +34,4 @@ class TableViewModel(
     }
 }
 
-class TableLiveData : CommonLiveData<TableDataUIModel>()
+class TableLiveData  @Inject constructor() : CommonLiveData<TableDataUIModel>()

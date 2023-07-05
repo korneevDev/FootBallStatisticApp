@@ -11,8 +11,9 @@ import github.mik0war.betmatchapp.statistic.defence.domain.DefenceUseCase
 import github.mik0war.betmatchapp.statistic.entityModel.StatisticUIModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class StatisticViewModel(
+class StatisticViewModel @Inject constructor(
     private val liveData: StatisticLiveData,
     private val attackUseCase: AttackUseCase,
     private val defenceUseCase: DefenceUseCase
@@ -33,4 +34,4 @@ class StatisticViewModel(
     override fun getList(): List<StatisticUIModel> = liveData.getList()
 }
 
-class StatisticLiveData : CommonLiveData<StatisticUIModel>()
+class StatisticLiveData  @Inject constructor(): CommonLiveData<StatisticUIModel>()

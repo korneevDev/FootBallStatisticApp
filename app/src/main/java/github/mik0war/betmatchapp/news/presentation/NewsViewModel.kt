@@ -10,8 +10,9 @@ import github.mik0war.betmatchapp.news.data.NewsRepository
 import github.mik0war.betmatchapp.news.entityModel.NewsUIModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class NewsViewModel(
+class NewsViewModel @Inject constructor(
     private val repository: NewsRepository,
     private val liveData: NewsLiveData
 ): ViewModel(), GetList<NewsUIModel> {
@@ -26,4 +27,4 @@ class NewsViewModel(
     override fun getList(): List<NewsUIModel> = liveData.getList()
 }
 
-class NewsLiveData : CommonLiveData<NewsUIModel>()
+class NewsLiveData @Inject constructor(): CommonLiveData<NewsUIModel>()

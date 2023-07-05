@@ -2,8 +2,9 @@ package github.mik0war.betmatchapp.statistic.defence.domain
 
 import github.mik0war.betmatchapp.statistic.defence.data.DefenceRepository
 import github.mik0war.betmatchapp.statistic.entityModel.StatisticUIModel
+import javax.inject.Inject
 
-class DefenceUseCase(
+class DefenceUseCase @Inject constructor(
     private val repository: DefenceRepository
 ) {
     suspend fun loadDefenceData(): List<StatisticUIModel> =

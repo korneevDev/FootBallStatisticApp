@@ -1,9 +1,10 @@
 package github.mik0war.betmatchapp.table.data.cache
 
 import github.mik0war.betmatchapp.table.entityModel.TableDataModel
+import javax.inject.Inject
 
 
-class TableCacheDataSource(
+class TableCacheDataSource @Inject constructor(
     private val tableDAO: TableDAO
 ) {
 

@@ -6,13 +6,13 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import github.mik0war.betmatchapp.R
 import github.mik0war.betmatchapp.core.ColorGetter
-import github.mik0war.betmatchapp.core.ContextColorProvider
+import github.mik0war.betmatchapp.core.ColorProvider
 
 class ListFragment : Fragment(R.layout.table_list_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val viewModel = (requireParentFragment().requireParentFragment() as TableFragment).viewModel
+        val viewModel = (requireParentFragment().requireParentFragment() as TableFragment).tableViewModel
 
-        val adapter = TableAdapter(viewModel, ColorGetter(ContextColorProvider(requireContext())))
+        val adapter = TableAdapter(viewModel, ColorGetter(ColorProvider(requireContext())))
 
         viewModel.observe(this){
             adapter.update()

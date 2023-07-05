@@ -5,8 +5,9 @@ import github.mik0war.betmatchapp.table.data.cloud.TableCloudDataSource
 import github.mik0war.betmatchapp.table.entityModel.TableDataModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class TableRepository(
+class TableRepository @Inject constructor(
     private val cloudDataSource: TableCloudDataSource,
     private val cacheDataSource: TableCacheDataSource
 ) {

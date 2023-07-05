@@ -2,8 +2,9 @@ package github.mik0war.betmatchapp.table.domain
 
 import github.mik0war.betmatchapp.table.data.TableRepository
 import github.mik0war.betmatchapp.table.entityModel.TableDataUIModel
+import javax.inject.Inject
 
-class GetDataUseCase(
+class GetDataUseCase @Inject constructor(
     private val tableRepository: TableRepository
 ) {
     suspend fun getData(country: String): List<TableDataUIModel> =
